@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Profile Section */
+        .profile {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+        
+        }
+
+        .profile img {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            border: 2px solid #ede2e2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Exercise Cards */
+        .exercise-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .exercise-card {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .exercise-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exercise-card p {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <input type="text" id="search" placeholder="Search exercises...">
+        <div class="profile">
+            <img src="307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="Profile">
+        </div>
+    </header>
+
+    <div class="streak-container">
+        <h3>🔥 Daily Streak: <span id="streak">5</span> Days</h3>
+    </div>
+
+    <div class="exercise-section">
+        <h2>Full Body Exercises</h2>
+        <div class="exercise-card">
+            <img src="The-20-minute-workout-Full-body-ladder-HIIT-workout-b6de.webp" alt="Full Body Exercise">
+            <p>Push-ups, Squats, Burpees</p>
+        </div>
+    </div>
+
+    <div class="exercise-section">
+        <h2>Nose Exercises</h2>
+        <div class="exercise-card">
+            <img src="nose.jpg" alt="Nose Exercise">
+            <p>Breathing Techniques, Face Yoga</p>
+        </div>
+    </div>
+
+    <div class="exercise-section">
+        <h2>Running Exercises</h2>
+        <div class="exercise-card">
+            <img src="road-running-women-sport-wallpaper-preview.jpg" alt="Running Exercise">
+            <p>Sprints, Jogging, Interval Training</p>
+        </div>
+    </div>
+
+    <div class="exercise-section">
+        <h2>Yoga Exercises</h2>
+        <div class="exercise-card">
+            <img src="yoga-2-1080x675.jpg" alt="Yoga Exercise">
+            <p>Sun Salutation, Warrior Pose</p>
+        </div>
+    </div>
+
+    <div class="workout-summary">
+        <h2>Your Daily Workout</h2>
+        <p>✅ 30 min Running | ✅ 20 Push-ups | ✅ 10 Min Stretching</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
