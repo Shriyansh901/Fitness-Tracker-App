@@ -35,3 +35,47 @@ document.getElementById('search').addEventListener('keyup', function() {
         }
     });
 });
+// ----------- Profile Section -------------
+// Profile data
+let userProfile = {
+    username: "JohnDoe",
+    height: "175 cm",
+    weight: "70 kg"
+};
+
+// Function to display user profile
+function displayUserProfile() {
+    document.getElementById('profile-username').innerText = `Username: ${userProfile.username}`;
+    document.getElementById('profile-height').innerText = `Height: ${userProfile.height}`;
+    document.getElementById('profile-weight').innerText = `Weight: ${userProfile.weight}`;
+}
+
+// Function to open the edit form
+function openEditProfile() {
+    document.getElementById('edit-profile-form').style.display = 'block';
+    document.getElementById('edit-username').value = userProfile.username;
+    document.getElementById('edit-height').value = userProfile.height;
+    document.getElementById('edit-weight').value = userProfile.weight;
+}
+
+// Function to save the edited profile
+function saveProfile() {
+    userProfile.username = document.getElementById('edit-username').value;
+    userProfile.height = document.getElementById('edit-height').value;
+    userProfile.weight = document.getElementById('edit-weight').value;
+
+    // Update the profile view
+    displayUserProfile();
+
+    // Hide the edit form
+    document.getElementById('edit-profile-form').style.display = 'none';
+}
+
+// Load profile on page load
+window.addEventListener('DOMContentLoaded', function() {
+    displayUserProfile();
+
+    // Event listeners
+    document.getElementById('edit-profile-btn').addEventListener('click', openEditProfile);
+    document.getElementById('save-profile').addEventListener('click', saveProfile);
+});
