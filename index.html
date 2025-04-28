@@ -29,6 +29,23 @@
             </form>
         </div>
     </div>
+<!-- Profile Section -->
+<div id="profile-section" style="background: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h2 id="profile-username"></h2>
+    <p id="profile-height"></p>
+    <p id="profile-weight"></p>
+
+    <!-- Hidden Edit Form -->
+    <div id="edit-profile-form" style="display: none; margin-top: 15px;">
+        <input type="text" id="edit-username" placeholder="Enter Username" style="display: block; margin-bottom: 10px;">
+        <input type="text" id="edit-height" placeholder="Enter Height" style="display: block; margin-bottom: 10px;">
+        <input type="text" id="edit-weight" placeholder="Enter Weight" style="display: block; margin-bottom: 10px;">
+        <button id="save-profile" style="padding: 5px 10px;">Save</button>
+    </div>
+
+    <!-- Edit Button -->
+    <button id="edit-profile-btn" style="margin-top: 15px; padding: 5px 10px;">Edit Profile</button>
+</div>
 
     <script src="script.js"></script>
 </body>
